@@ -1,0 +1,60 @@
+EventDemo:
+    automatic_field:
+        type: bool
+
+    trigger_field:
+        type: bool
+        onchange: |
+            print(`trigger_field new value: ${self.trigger_field}`);
+            State.set(self.id(), "automatic_field", !self.automatic_field);
+
+    computed_field:
+        type: compute
+        trigger:
+            - trigger_field
+            - trigger_count
+        code: |
+            return `Trigger is set to: ${self.trigger_field}`;
+
+    trigger_count:
+        type: compute
+        trigger:
+            - trigger_field
+            # - trigger_count # directly re-triggering itself is ignored
+            # - computed_field # could mutually cause infinite re-trigger, but is prevented by cycle detection
+        code: |
+            print(`TRIGGER: ${self.trigger_count}`);
+            if type_of(self.trigger_count) != "i64" {
+                return 0;
+            }
+            return self.trigger_count + 1;
+
+    code:
+        type: text
+        onchange: |
+            print(`text changed: ${self.code}`);
+            try {
+                let params = util::example_parse_code(self.code);
+                State.set(self.id(), "param1", params[0]);
+                State.set(self.id(), "param2", params[1]);
+            }
+            catch (err) {
+                State.set(self.id(), "param1", ());
+                State.set(self.id(), "param2", ());
+            }
+
+    code_parse_message:
+        type: compute
+        trigger:
+            - code
+        code: |
+            try {
+                util::example_parse_code(self.code);
+            }
+            catch (err) {
+                return err;
+            }
+            return "Code OK";
+
+    param1: text
+    param2: numeric

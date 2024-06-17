@@ -1,0 +1,54 @@
+DataOperationsDemo:
+    - parallel:
+        - meta:
+            title: Demonstrates related choice logic
+        - input:
+            field: continent
+        - input:
+            field: country
+        - input:
+            field: value
+    - parallel:
+        - meta:
+            title: Demonstrates inverted drilldown lookups
+        - input:
+            field: inverted_select
+        - input:
+            field: inverted_lookup
+
+SummaryDemo:
+    - parallel:
+        - meta:
+            title: Demonstrates price summary widget
+        - input:
+            field: glass_type
+            title: Glass Type
+        - input:
+            field: accessory_type
+            title: Accessory Type
+
+WindowDemo:
+    - parallel:
+        - meta:
+            title: Demonstrats an interactive SVG visualization
+        - input:
+            field: width
+            title: Width (mm)
+        - input:
+            field: height
+            title: Height (mm)
+        - input:
+            field: width_first
+            title: Width of the left window (mm)
+        - input:
+            field: width_second
+            title: Width of the right window (mm)
+        - input:
+            field: openable_left
+            title: Openable (left)
+            none: Not openable
+        - input:
+            field: openable_right
+            title: Openable (right)
+            none: Not openable
+

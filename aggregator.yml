@@ -1,0 +1,31 @@
+options:
+    name: Bill of materials
+    path: bom
+
+meta:
+    template_product: KONFOO-TEMPLATE
+
+rules:
+    - summary_demo_glass:
+        domain: SummaryDemo
+        require:
+            - self.glass_type
+        price: |
+            (expr)
+            let result = unique("glass", "name", self.glass_type);
+            if result != () {
+                return result.Price;
+            }
+            return 0;
+
+    - summary_demo_accessory:
+        domain: SummaryDemo
+        require:
+            - self.accessory_type
+        price: |
+            (expr)
+            let result = unique("accessories", "name", self.accessory_type);
+            if result != () {
+                return result.Price;
+            }
+            return 0;

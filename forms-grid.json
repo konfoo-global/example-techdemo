@@ -1,0 +1,461 @@
+{
+    "DataOperationsDemo": {
+        "model": "DataOperationsDemo",
+        "sections": [
+            {
+                "grid": [
+                    {
+                        "field": "continent",
+                        "model": "DataOperationsDemo",
+                        "type": "choice",
+                        "w": 6,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "field": "country",
+                        "model": "DataOperationsDemo",
+                        "type": "choice",
+                        "w": 6,
+                        "x": 6,
+                        "y": 0
+                    },
+                    {
+                        "field": "value",
+                        "model": "DataOperationsDemo",
+                        "type": "choice",
+                        "w": 6,
+                        "x": 0,
+                        "y": 1
+                    }
+                ],
+                "initially_open": true,
+                "options": {
+                    "acceptWidgets": true,
+                    "cellHeight": 80,
+                    "children": [],
+                    "float": true,
+                    "margin": 5,
+                    "removable": "#grid-stack-trash"
+                },
+                "title": "Main"
+            },
+            {
+                "grid": [
+                    {
+                        "field": "inverted_select",
+                        "model": "DataOperationsDemo",
+                        "type": "choice",
+                        "w": 5,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "field": "inverted_lookup",
+                        "model": "DataOperationsDemo",
+                        "type": "choice",
+                        "w": 5,
+                        "x": 0,
+                        "y": 1
+                    }
+                ],
+                "initially_open": false,
+                "options": {
+                    "acceptWidgets": true,
+                    "cellHeight": 80,
+                    "children": [],
+                    "float": true,
+                    "margin": 5,
+                    "removable": "#grid-stack-trash"
+                },
+                "title": "Second"
+            }
+        ]
+    },
+    "EventDemo": {
+        "model": "EventDemo",
+        "sections": [
+            {
+                "grid": [
+                    {
+                        "field": "trigger_field",
+                        "model": "EventDemo",
+                        "type": "bool",
+                        "w": 4,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "field": "computed_field",
+                        "model": "EventDemo",
+                        "type": "compute",
+                        "w": 6,
+                        "x": 4,
+                        "y": 0
+                    },
+                    {
+                        "field": "trigger_count",
+                        "model": "EventDemo",
+                        "type": "compute",
+                        "w": 6,
+                        "x": 4,
+                        "y": 1
+                    },
+                    {
+                        "field": "automatic_field",
+                        "model": "EventDemo",
+                        "type": "bool",
+                        "w": 6,
+                        "x": 4,
+                        "y": 2
+                    },
+                    {
+                        "field": "code",
+                        "model": "EventDemo",
+                        "type": "text",
+                        "w": 10,
+                        "x": 0,
+                        "y": 3
+                    },
+                    {
+                        "w": 10,
+                        "x": 0,
+                        "y": 4,
+                        "model": "EventDemo",
+                        "field": "code_parse_message",
+                        "type": "compute"
+                    },
+                    {
+                        "w": 5,
+                        "x": 0,
+                        "y": 5,
+                        "model": "EventDemo",
+                        "field": "param1",
+                        "type": "text"
+                    },
+                    {
+                        "w": 5,
+                        "x": 5,
+                        "y": 5,
+                        "model": "EventDemo",
+                        "field": "param2",
+                        "type": "numeric"
+                    }
+                ],
+                "initially_open": true,
+                "options": {
+                    "acceptWidgets": true,
+                    "cellHeight": 80,
+                    "children": [],
+                    "float": true,
+                    "margin": 5,
+                    "removable": "#grid-stack-trash"
+                },
+                "title": "EventDemo"
+            }
+        ]
+    },
+    "SummaryDemo": {
+        "model": "SummaryDemo",
+        "sections": [
+            {
+                "grid": [
+                    {
+                        "field": "accessory_type",
+                        "model": "SummaryDemo",
+                        "type": "choice",
+                        "w": 5,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "field": "glass_type",
+                        "model": "SummaryDemo",
+                        "type": "choice",
+                        "w": 5,
+                        "x": 5,
+                        "y": 0
+                    }
+                ],
+                "initially_open": true,
+                "options": {
+                    "acceptWidgets": true,
+                    "cellHeight": 80,
+                    "children": [],
+                    "float": true,
+                    "margin": 5,
+                    "removable": "#grid-stack-trash"
+                },
+                "title": "SummaryDemo"
+            }
+        ]
+    },
+    "WidgetDemo": {
+        "model": "WidgetDemo",
+        "sections": [
+            {
+                "grid": [
+                    {
+                        "field": "boolean_value",
+                        "model": "WidgetDemo",
+                        "type": "bool",
+                        "w": 12,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "field": "numeric",
+                        "model": "WidgetDemo",
+                        "type": "numeric",
+                        "w": 12,
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "field": "single_line_text",
+                        "model": "WidgetDemo",
+                        "type": "text",
+                        "w": 12,
+                        "x": 0,
+                        "y": 2
+                    },
+                    {
+                        "field": "multi_line_text",
+                        "h": 2,
+                        "model": "WidgetDemo",
+                        "type": "text",
+                        "w": 12,
+                        "x": 0,
+                        "y": 3
+                    }
+                ],
+                "initially_open": true,
+                "options": {
+                    "acceptWidgets": true,
+                    "cellHeight": 80,
+                    "children": [],
+                    "float": true,
+                    "margin": 5,
+                    "removable": "#grid-stack-trash"
+                },
+                "title": "Basic widgets"
+            },
+            {
+                "grid": [
+                    {
+                        "field": "size",
+                        "h": 3,
+                        "model": "WidgetDemo",
+                        "type": "choice",
+                        "w": 5,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "field": "select_one",
+                        "model": "WidgetDemo",
+                        "type": "choice",
+                        "w": 7,
+                        "x": 5,
+                        "y": 0
+                    },
+                    {
+                        "field": "select_multiple",
+                        "model": "WidgetDemo",
+                        "type": "choice",
+                        "w": 7,
+                        "x": 5,
+                        "y": 1
+                    },
+                    {
+                        "field": "continent",
+                        "model": "WidgetDemo",
+                        "type": "choice",
+                        "w": 7,
+                        "x": 5,
+                        "y": 2
+                    }
+                ],
+                "initially_open": false,
+                "options": {
+                    "acceptWidgets": true,
+                    "cellHeight": 80,
+                    "children": [],
+                    "float": true,
+                    "margin": 5,
+                    "removable": "#grid-stack-trash"
+                },
+                "title": "Choice widgets"
+            },
+            {
+                "grid": [
+                    {
+                        "field": "trigger_compute",
+                        "model": "WidgetDemo",
+                        "type": "bool",
+                        "w": 6,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "field": "computed_field",
+                        "model": "WidgetDemo",
+                        "type": "compute",
+                        "w": 12,
+                        "x": 0,
+                        "y": 1
+                    }
+                ],
+                "initially_open": false,
+                "options": {
+                    "acceptWidgets": true,
+                    "cellHeight": 80,
+                    "children": [],
+                    "float": true,
+                    "margin": 5,
+                    "removable": "#grid-stack-trash"
+                },
+                "title": "Computed fields"
+            },
+            {
+                "grid": [
+                    {
+                        "field": "list",
+                        "h": 2,
+                        "model": "WidgetDemo",
+                        "type": "list",
+                        "w": 12,
+                        "x": 0,
+                        "y": 0
+                    }
+                ],
+                "initially_open": false,
+                "options": {
+                    "acceptWidgets": true,
+                    "cellHeight": 80,
+                    "children": [],
+                    "float": true,
+                    "margin": 5,
+                    "removable": "#grid-stack-trash"
+                },
+                "title": "List widgets"
+            }
+        ]
+    },
+    "WidgetDemoListItem": {
+        "model": "WidgetDemoListItem",
+        "sections": [
+            {
+                "grid": [
+                    {
+                        "field": "product",
+                        "model": "WidgetDemoListItem",
+                        "type": "choice",
+                        "w": 6,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "field": "quantity",
+                        "model": "WidgetDemoListItem",
+                        "type": "numeric",
+                        "w": 3,
+                        "x": 6,
+                        "y": 0
+                    }
+                ],
+                "initially_open": true,
+                "options": {
+                    "acceptWidgets": true,
+                    "cellHeight": 80,
+                    "children": [],
+                    "float": true,
+                    "margin": 5,
+                    "removable": "#grid-stack-trash"
+                },
+                "title": "WidgetDemoListItem"
+            }
+        ]
+    },
+    "WindowDemo": {
+        "model": "WindowDemo",
+        "sections": [
+            {
+                "grid": [
+                    {
+                        "field": "width",
+                        "model": "WindowDemo",
+                        "type": "numeric",
+                        "w": 12,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "field": "height",
+                        "model": "WindowDemo",
+                        "type": "numeric",
+                        "w": 12,
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "field": "width_first",
+                        "model": "WindowDemo",
+                        "type": "numeric",
+                        "w": 12,
+                        "x": 0,
+                        "y": 2
+                    },
+                    {
+                        "field": "width_second",
+                        "model": "WindowDemo",
+                        "type": "compute",
+                        "w": 12,
+                        "x": 0,
+                        "y": 3
+                    }
+                ],
+                "initially_open": true,
+                "options": {
+                    "acceptWidgets": true,
+                    "cellHeight": 80,
+                    "children": [],
+                    "float": true,
+                    "margin": 5,
+                    "removable": "#grid-stack-trash"
+                },
+                "title": "Dimensions"
+            },
+            {
+                "grid": [
+                    {
+                        "field": "openable_left",
+                        "model": "WindowDemo",
+                        "type": "choice",
+                        "w": 12,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "field": "openable_right",
+                        "model": "WindowDemo",
+                        "type": "choice",
+                        "w": 12,
+                        "x": 0,
+                        "y": 1
+                    }
+                ],
+                "initially_open": true,
+                "options": {
+                    "acceptWidgets": true,
+                    "cellHeight": 80,
+                    "children": [],
+                    "float": true,
+                    "margin": 5,
+                    "removable": "#grid-stack-trash"
+                },
+                "title": "Openable"
+            }
+        ]
+    }
+}

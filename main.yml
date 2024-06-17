@@ -1,0 +1,26 @@
+root:
+    - DataOperationsDemo
+    - SummaryDemo
+    - WindowDemo
+    - WidgetDemo
+    - EventDemo
+
+options:
+    # sets global default renderer
+    renderer: grid
+
+    form: form.yml
+    aggregators:
+        - aggregator.yml
+    scripts:
+        util: util.rhai
+    data:
+        - demo-data.yml
+    types:
+        - typedefs.yml
+    models:
+        - drilldown.yml
+        - window.yml
+        - summary.yml
+        - widgets.yml
+        - event-demo.yml

@@ -1,0 +1,18 @@
+SummaryDemo:
+    meta:
+        title: Summary component demo
+        visualizers:
+            knf-summary:
+                url: https://components.konfoo.com/knf-summary.js
+                aggregator: bom
+                field: price
+                currency: €
+                header: Total value
+
+    glass_type:
+        type: choice
+        options: derive.glass.unique.name
+
+    accessory_type:
+        type: choice
+        options: derive.accessories.unique.name

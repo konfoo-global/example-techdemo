@@ -1,0 +1,110 @@
+WidgetDemoListItem:
+    meta:
+        title: List Item
+    product:
+        type: choice
+        options:
+            - Product 1
+            - Product 2
+            - Product 3
+    quantity:
+        type: numeric
+        step: 1
+        min: 0
+        max: 99
+        default: 1
+
+WidgetDemo:
+    meta:
+        title: Widget Demonstration
+
+    numeric:
+        type: numeric
+        min: -50
+        max: 50
+        step: 5
+        default: 25
+    single_line_text: string
+    multi_line_text:
+        type: string
+        widget: text
+    boolean_value: bool
+    date_field: date
+    color: rgb
+    color_with_alpha: rgba
+
+    # choice types
+    size:
+        type: choice
+        constraint: one # default: one | <one|optional|0..1|0..n>
+        widget: radio
+        options:
+            - Small
+            - Medium
+            - Large
+    select_one:
+        type: choice
+        constraint: optional
+        widget: dropdown
+        options:
+            - One
+            - Two
+            - Three
+    select_multiple:
+        type: choice
+        constraint: 0..n
+        widget: dropdown
+        options:
+            - Olives
+            - Peach
+            - Avocado
+    continent:
+        type: choice
+        constraint: optional
+        widget: search
+        label: Search
+        options:
+            - Africa
+            - Antarctica
+            - Asia
+            - Australia
+            - Europe
+            - North America
+            - South America
+    gallery:
+        type: choice
+        constraint: optional
+        widget: gallery
+        options:
+            - First
+            - Second
+            - Third
+            - Fourth
+            - Fifth
+            - Sixth
+            - Seventh
+            - Eighth
+        thumbnails:
+            First: https://static.konfoo.com/1/aTkiDDwvqeZpoPnpVbewNP3k/cat1.jpeg
+            Second: https://static.konfoo.com/1/aTkiDDwvqeZpoPnpVbewNP3k/cat2.jpeg
+            Third: https://static.konfoo.com/1/aTkiDDwvqeZpoPnpVbewNP3k/cat3.jpeg
+            Fourth: https://static.konfoo.com/1/aTkiDDwvqeZpoPnpVbewNP3k/cat4.jpeg
+            Fifth: https://static.konfoo.com/1/aTkiDDwvqeZpoPnpVbewNP3k/cat5.jpeg
+            Sixth: https://static.konfoo.com/1/aTkiDDwvqeZpoPnpVbewNP3k/cat6.jpeg
+            Seventh: https://static.konfoo.com/1/aTkiDDwvqeZpoPnpVbewNP3k/cat7.jpeg
+            Eighth: https://static.konfoo.com/1/aTkiDDwvqeZpoPnpVbewNP3k/cat8.jpeg
+
+    trigger_compute: bool
+    computed_field:
+        type: compute
+        trigger:
+            - trigger_compute
+        code: |
+            return `Trigger Compute is ${self.trigger_compute}`;
+
+    list:
+        type: list
+        constraint: 0..n
+        model: WidgetDemoListItem
+        # add: true
+        # delete: true

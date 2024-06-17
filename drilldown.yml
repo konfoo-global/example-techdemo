@@ -1,0 +1,97 @@
+DataOperationsDemo:
+    meta:
+        title: Data operations
+
+    continent:
+        type: choice
+        constraint: required
+        default: Asia
+        widget: search
+        options: derive.multilevel-example.group.continent
+
+    country:
+        type: choice
+        constraint: required
+        widget: search
+        options: derive.multilevel-example.group.country
+        depends:
+            - continent
+        validate: |
+            let groups = [];
+            let vals = [];
+
+            if self.continent != () {
+                groups.push("continent");
+                vals.push(self.continent);
+            }
+
+            let filtered = values(
+                group_filter("multilevel-example", groups, vals),
+                "country"
+            );
+
+            Validity.enable_option(|x| {
+                if filtered.len() == 0 {
+                    return true;
+                }
+                return filtered.contains(x);
+            });
+            return true;
+
+    value:
+        type: choice
+        constraint: required
+        # widget: radio
+        widget: search
+        options: derive.multilevel-example.group.value
+        depends:
+            - continent
+            - country
+        validate: |
+            let groups = [];
+            let vals = [];
+            if self.continent != () {
+                groups.push("continent");
+                vals.push(self.continent);
+            }
+
+            if self.country != () {
+                groups.push("country");
+                vals.push(self.country);
+            }
+
+            let filtered = values(
+                group_filter("multilevel-example", groups, vals),
+                "value"
+            );
+            Validity.enable_option(|x| {
+                if filtered.len() == 0 {
+                    return true;
+                }
+                return filtered.contains(x);
+            });
+            return true;
+
+    inverted_select:
+        type: choice
+        constraint: optional
+        options: derive.inverse-example.group.group
+
+    inverted_lookup:
+        type: choice
+        constraint: optional
+        options: derive.inverse-example.group.value
+        depends:
+            - inverted_select
+        validate: |
+            if self.inverted_select == () {
+                // Enable all options if self.inverted_select is not set
+                Validity.enable_option(true);
+            }
+            else {
+                // Enable only values that do not have inverted_select group
+                let matched_rows = group_filter_inverse("inverse-example", ["group"], [self.inverted_select]);
+                let filtered = distinct(values(matched_rows, "value"));
+                Validity.enable_option(filtered);
+            }
+            return true;

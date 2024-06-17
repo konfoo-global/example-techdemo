@@ -1,0 +1,290 @@
+glass:
+    unique:
+        name: Name
+        code: Code
+    csv: |
+        "Name","Code","Price"
+        "Glass 1","GL-1",50
+        "Glass 2","GL-2",20
+        "Glass 3","GL-3",10
+        "Glass 4","GL-4",100
+
+accessories:
+    unique:
+        name: Name
+        code: Code
+    csv: |
+        "Name","Code","Price"
+        "Accessory 1","ACC-1",10
+        "Accessory 2","ACC-2",5
+        "Accessory 3","ACC-3",15
+        "Accessory 4","ACC-4",25
+
+
+multilevel-example:
+    group:
+        continent: continent
+        country: country
+        value: value
+    csv: |
+        continent,country,value
+        Europe,Estonia,Foo
+        Europe,Estonia,Bar
+        Europe,Finland,Bar
+        Europe,Finland,Baz
+        Africa,Ethiopia,Baz
+        Africa,Ethiopia,Quux
+        Africa,Nigeria,Quux
+        Africa,Nigeria,Zuup
+        Africa,Nigeria,Bar
+        Asia,Japan,Bar
+        Asia,Japan,Baz
+        Asia,China,Foo
+        Asia,China,Bar
+
+inverse-example:
+    group:
+        group: group
+        value: value
+    csv: |
+        group,value
+        Group A,Value A1
+        Group A,Value A2
+        Group A,Value A3
+        Group B,Value B1
+        Group B,Value B2
+        Group B,Value B3
+        Group C,Value C1
+        Group C,Value C2
+        Group C,Value C3
+
+formulation:
+    group:
+        formula: formula
+        can_size: can_size
+        filling_grade: filling_grade
+        foam_color: foam_color
+        ax_code: ax_code
+        name: name
+    csv: |
+        formula,can_size,filling_grade,foam_color,ax_code,name
+        V2K,650,400,Green,V2K0202,Strawfoam 2 K  400
+        V2K,650,400,Blue,V2K0202/N,Strawfoam 2 K  Blue 400
+        V2K,650,400,Green,V2K0202/F,Strawfoam 2 K  Fast 400
+        VA,650,460,,VA0002,
+        VA,650,510,,VA0006,
+        VA,520,320,,VA0008,
+        VA,650,500,,VA0009,
+        VA,1000,750,,VA0011,
+        VA,650,440,,VA0015,
+        VA,650,385,,VA0056,
+        VAHP,650,500,,VAHP0202,
+        VBK/U,1000,750,Orange,VBK0002/UO,Strawfoam Adhesive EPS All Season orange 750
+        VBK/U,1000,750,Grey,VBK0002/UB,Strawfoam Adhesive EPS All Season gray 750
+        VBP/U,1000,800,Orange,VBP0000/UO,Gunfoam Adhesive EPS All Season orange 800
+        VBP/U,1000,775,Yellow,VBP0001/U,Gunfoam Adhesive EPS All Season 780
+        VBP/U,1000,775,Orange,VBP0001/UO,Gunfoam Adhesive EPS All Season orange 780
+        VBP/U,1000,750,Yellow,VBP0002/U,Gunfoam Adhesive EPS All Season 750
+        VBP/U,1000,750,Grey,VBP0002/UB,Gunfoam Adhesive EPS All Season grey 750
+        VBP/U,1000,750,Blue,VBP0002/UN,Gunfoam Adhesive EPS All Season Blue 750
+        VBP/U,1000,750,Orange,VBP0002/UO,Gunfoam Adhesive EPS All Season orange 750
+        VBP/U,1000,715,Orange,VBP0004/UO,Gunfoam Adhesive EPS All Season orange 710
+        VBP/U,800,675,Yellow,VBP0102/U,Gunfoam Adhesive EPS All Season 680
+        VEK,1000,755,Green,VEK0002/R,Strawfoam Elastic Green 750
+        VEK,650,500,Green,VEK0202/R,Strawfoam Elastic Green 500
+        VEP,1000,745,Yellow,VEP0002,Gunfoam Elastic  750
+        VEP,1000,745,Grey,VEP0002/B,Gunfoam Elastic Grey  750
+        VEP,1000,745,Blue,VEP0002/N,Gunfoam Elastic Blue 750
+        VEP,1000,745,Green,VEP0002/R,Gunfoam Elastic Green 750
+        VEP,1000,745,Violet,VEP0002/V,Gunfoam Elastic Purple 750
+        VEP,650,500,Violet,VEP0202/V,Gunfoam Elastic Purple 500
+        VFK,1000,765,Red,VFK0002,Strawfoam Fire Rated  760
+        VFK,1000,750,Red,VFK0002/P,Gunfoam Fire Rated HFC free Pink 750
+        VFK,650,500,Red,VFK0202,Strawfoam Fire Rated  500
+        VFP,1000,745,Red,VFP0001/P,Gunfoam Fire Rated Pink 750
+        VFP,1000,720,Red,VFP0002/P,Gunfoam Fire Rated Pink 720
+        VFP,1000,690,Red,VFP0003/P,Gunfoam Fire Rated Pink 690
+        VFP,1000,605,Red,VFP0004/P,Gunfoam Fire Rated Pink 605
+        VFP,1000,650,Red,VFP0005/P,Gunfoam Fire Rated Pink 650
+        VHK,1000,750,Yellow,VHK0002/U,Strawfoam Winter CP Free  New 750
+        VHK,1000,750,Blue,VHK0002/UN,Strawfoam Winter CP Free  New Blue 750
+        VHK,800,680,Yellow,VHK0102/U,Strawfoam Winter CP Free  New 680
+        VHK,800,610,Yellow,VHK0104/U,Strawfoam Winter CP Free  New 610
+        VHK,650,500,Yellow,VHK0202/U,Strawfoam Winter CP Free  New 500
+        VHK,650,500,Green,VHK0202/UR,Strawfoam Winter CP Free  New Green 500
+        VHK,420,350,Yellow,VHK0302/U,Strawfoam Winter CP Free  New 350
+        VHP,1000,850,Yellow,VHP0000,Gunfoam Low Expansion All Season HFC Free  850
+        VHP,1000,750,Yellow,VHP0002,Gunfoam Low Expansion All Season HFC Free  750
+        VHP,1000,740,Yellow,VHP0003,Gunfoam Low Expansion All Season HFC Free  740
+        VHP,650,500,Yellow,VHP0202,Gunfoam Low Expansion All Season HFC Free  500
+        VJP,1000,750,Yellow,VJP0002,Gunfoam B1 750
+        VJP,1000,745,Blue,VJP0002/N,Gunfoam B1 Blue  750
+        VJP/G,1000,745,Yellow,VJP0002/G,Gunfoam Adhesive B1 750
+        VKK,1000,750,Yellow,VKK0002,Strawfoam Adhesive Stone  750
+        VKK,650,500,Yellow,VKK0202,Strawfoam Adhesive Stone  500
+        VKP,1000,850,Yellow,VKP0000,Gunfoam Adhesive Stone  850
+        VKP,1000,750,Yellow,VKP0002,Gunfoam Adhesive Stone  750
+        VKP,650,400,Yellow,VKP0204,Gunfoam Adhesive Stone  400
+        VLK/U,1000,750,Yellow,VLK0002/U,Strawfoam All Season  750
+        VLK/U,1000,750,Grey,VLK0002/UB,Strawfoam All Season  Black 750
+        VLK/U,1000,750,Orange,VLK0002/UO,Strawfoam All Season Orange 750
+        VLK/U,1000,735,Yellow,VLK0003/U,Strawfoam All Season  730
+        VLK/U,1000,735,Grey,VLK0003/UB,Strawfoam All Season Black 730
+        VLK/U,1000,735,Orange,VLK0003/UO,Strawfoam All Season Orange 730
+        VLK/U,1000,675,Yellow,VLK0004/U,Strawfoam All Season  680
+        VLK/U,1000,650,Yellow,VLK0005/U,Strawfoam All Season  650
+        VLK/U,1000,460,Yellow,VLK0009/U,Strawfoam All Season  460
+        VLK/U,1000,620,Yellow,VLK0010/U,Strawfoam All Season  620
+        VLK/U,1000,775,Yellow,VLK0011/U,Strawfoam All Season  770
+        VLK/U,1000,710,Yellow,VLK0012/U,Strawfoam All Season  710
+        VLK/U,1000,770,Yellow,VLK0021/U,Strawfoam All Season  770
+        VLK/U,1000,440,Yellow,VLK0037/U,Strawfoam All Season  440
+        VLK/U,800,625,Yellow,VLK0104/U,Strawfoam All Season  620
+        VLK/U,650,480,Yellow,VLK0202/U,Strawfoam All Season 480
+        VLK/U,650,435,Yellow,VLK0204/U,Strawfoam All Season  440
+        VLK/U,650,500,Yellow,VLK0209/U,Straw Foam All Season 500
+        VLK/U,650,385,Yellow,VLK0210/U,Straw Foam All Season 390
+        VLK/U,520,330,Yellow,VLK0302/U,Strawfoam All Season  330
+        VLK/U,520,310,Yellow,VLK0304/U,Strawfoam All Season  310
+        VLK/U,520,355,Yellow,VLK0305/U,Strawfoam All Season  350
+        VLK/U,520,240,Yellow,VLK0306/U,Strawfoam All Season  240
+        VLK/U,520,290,Yellow,VLK0402/U,Strawfoam All Season  290
+        VLSP,1000,700,White,VLSP0003,Gunfoam Very Low Monomer Insulation foam 700
+        VMK,1000,750,Yellow,VMK0001,Strawfoam Gapfilling  750
+        VMK,1000,745,Grey,VMK0001/B,Strawfoam Gapfilling  750 Grey
+        VMK,1000,725,Yellow,VMK0002,Strawfoam Gapfilling  730
+        VMK,1000,695,Yellow,VMK0003,Strawfoam Gapfilling  700
+        VMK,1000,670,Yellow,VMK0004,Strawfoam Gapfilling  670
+        VMK,1000,640,Yellow,VMK0005,Strawfoam Gapfilling  640
+        VMK,1000,575,Yellow,VMK0006,Strawfoam Gapfilling  580
+        VMK,1000,515,Yellow,VMK0008,Strawfoam Gapfilling  510
+        VMK,1000,455,Yellow,VMK0009,Strawfoam Gapfilling  470
+        VMK,1000,620,Yellow,VMK0012,Strawfoam Gapfilling  620
+        VMK,1000,440,Yellow,VMK0014,Strawfoam Gapfilling  440
+        VMK,1000,410,Yellow,VMK0016,Strawfoam Gapfilling  410
+        VMK,1000,305,Yellow,VMK0022,Strawfoam Gapfilling  310
+        VMK,1000,600,Yellow,VMK0028,Strawfoam Gapfilling  600
+        VMK,1000,700,Yellow,VMK0038,Strawfoam Gapfilling  700
+        VMK,1000,650,Yellow,VMK0039,Strawfoam Gapfilling  650
+        VMK,650,500,Yellow,VMK0201,Strawfoam Gapfilling  500
+        VMK,650,500,Grey,VMK0201/B,Strawfoam Gapfilling Black 500
+        VMK,650,480,Yellow,VMK0202,Strawfoam Gapfilling  480
+        VMK,650,420,Yellow,VMK0204,Strawfoam Gapfilling  420
+        VMK,650,340,Yellow,VMK0206,Strawfoam Gapfilling  340
+        VMK,650,215,Yellow,VMK0207,Strawfoam Gapfilling  210
+        VMK,650,455,Yellow,VMK0208,Strawfoam Gapfilling  450
+        VMK,650,345,Yellow,VMK0209,Strawfoam Gapfilling  350
+        VMK,520,325,Yellow,VMK0302,Strawfoam Gapfilling  330
+        VMK,520,275,Yellow,VMK0304,Strawfoam Gapfilling  270
+        VMK,405,300,Yellow,VMK0401,Strawfoam Gapfilling  300
+        VMK,405,290,Yellow,VMK0402,Strawfoam Gapfilling  290
+        VMP,1000,800,Yellow,VMP0001,Strawfoam Gapfilling  800
+        VMP,1000,745,Yellow,VMP0002,Gunfoam Gapfilling  750
+        VMP,1000,750,Grey,VMP0002/B,Gunfoam Gapfilling Grey 750
+        VMP,1000,745,Green,VMP0002/R,Gunfoam Gapfilling Green 750
+        VMP,1000,715,Yellow,VMP0004,Gunfoam Gapfilling 720
+        VMP,1000,690,Yellow,VMP0005,Gunfoam Gapfilling  690
+        VMP,1000,585,Yellow,VMP0006,Gunfoam Gapfilling  580
+        VMP,1000,640,Yellow,VMP0011,Gunfoam Gapfilling 640
+        VMP,1000,825,Yellow,VMP0012,Gunfoam Gapfilling 830
+        VMP,1000,500,Yellow,VMP0013,Gunfoam Gapfilling 500
+        VMP,800,650,Yellow,VMP0102,Gunfoam Gapfilling  650
+        VMP,650,500,Yellow,VMP0202,Gunfoam Gapfilling 500
+        VNK,1000,700,White,VNK0003,Strawfoam very low isocyanate monomer 700
+        VNK,800,500,White,VNK0104,Strawfoam very low isocyanate monomer 500
+        VNK,650,500,White,VNK0202,Strawfoam very low isocyanate monomer 500
+        VNP,1000,700,White,VNP0003,Gunfoam very low isocyanate monomer 700
+        VNP,650,500,White,VNP0202,Gunfoam very low isocyanate monomer 500
+        VNP,650,500,White,VNP0202/U,
+        VOK,1000,750,Yellow,VOK0001,Strawfoam Standard 750
+        VOK/S,1000,750,Green,VOK0001/R,Strawfoam Standard Green 750
+        VOK/T,1000,755,Yellow,VOK0001/S,
+        VOK/T,1000,730,Yellow,VOK0002,Strawfoam Standard  730
+        VOK/T,1000,675,Yellow,VOK0004,Strawfoam Standard  680
+        VOK/T,1000,705,Yellow,VOK0004/S,
+        VOK/T,1000,580,Yellow,VOK0006,Strawfoam Standard  580
+        VOK/T,1000,690,Yellow,VOK0006/S,
+        VOK/T,1000,570,Yellow,VOK0008/S,
+        VOK/T,1000,630,Yellow,VOK0012,
+        VOK/T,1000,415,Yellow,VOK0016,Strawfoam Standard  410
+        VOK/T,1000,605,Yellow,VOK0028,Strawfoam Standard  600
+        VOK/T,1000,765,Yellow,VOK0033,Strawfoam Standard  770
+        VOK/T,1000,755,Tropic,VOK0070/T,Strawfoam Tropic  750
+        VOK/T,650,500,Tropic,VOK0201/T,
+        VOK/T,650,485,Yellow,VOK0202,Strawfoam Standard  480
+        VOK/T,650,500,Yellow,VOK0202/S,
+        VOK/T,650,485,Tropic,VOK0202/T,
+        VOK/T,650,425,Yellow,VOK0204,Strawfoam Standard  430
+        VOK/T,650,410,Yellow,VOK0204/S,
+        VOK/T,650,495,Yellow,VOK0209,Strawfoam Standard  500
+        VOK/T,520,330,Yellow,VOK0302,Strawfoam Standard  330
+        VOK/T,520,310,Yellow,VOK0305,Strawfoam Standard  310
+        VOK/T,405,290,Yellow,VOK0402,Strawfoam Standard  290
+        VOK/T,405,285,Yellow,VOK0403,Strawfoam Standard  285
+        VRP,1000,880,Yellow,VRP0000/W,Gunfoam Mega High Yield Winter  880
+        VRP,1000,880,Grey,VRP0000/WH,Gunfoam Mega High Yield Winter Grey 880
+        VRP,1000,805,Yellow,VRP0001/W,Gunfoam Mega High Yield Winter  805
+        VRP,1000,750,Yellow,VRP0002/W,Gunfoam Mega High Yield Winter  750
+        VRP,1000,850,Yellow,VRP0003/W,Gunfoam Mega High Yield Winter  850
+        VRP,1000,710,Yellow,VRP0006/W,Gunfoam Mega High Yield Winter  710
+        VRP,1000,605,Yellow,VRP0011/W,Gunfoam Mega High Yield Winter  610
+        VRP,800,670,Yellow,VRP0102/W,Gunfoam Mega High Yield Winter  670
+        VSFP,1000,810,Yellow,VSFP0002,Gunfoam Spray 810
+        VSK,650,495,White,VSK0202,Strawfoam STP  500
+        VSP,1000,745,White,VSP0002,Gunfoam STP  750
+        VSP,650,594,White,VSP0202,Gunfoam STP  500
+        VSP,650,400,White,VSP0204,Gunfoam STP  400
+        VZP,1000,860,Yellow,VZP0000/W,
+        VTP/U,1000,870,Yellow,VTP0000/U,Gunfoam Winter  New 870
+        VTP/U,1000,870,Grey,VTP0000/UB,Gunfoam Winter  New Grey 870
+        VTP/U,1000,870,Green,VTP0000/UR,Gunfoam Winter  New  Green 870
+        VTP/U,1000,830,Yellow,VTP0001/U,Gunfoam Winter  New 830
+        VTP/U,1000,765,Yellow,VTP0002/U,Gunfoam Winter  New 770
+        VTP/U,1000,760,Green,VTP0002/UR,Gunfoam Winter  New  Green 760
+        VTP/U,1000,705,Yellow,VTP0009/U,Gunfoam Winter  New 710
+        VTP/U,1000,725,Yellow,VTP0010/U,Gunfoam Winter  New 720
+        VTP/U,1000,750,Yellow,VTP0011/U,Gunfoam Winter  New 750
+        VTP/U,1000,630,Yellow,VTP0013/U,Gunfoam Winter  New 630
+        VTP/U,650,500,Yellow,VTP0202/U,Gunfoam Winter  New 500
+        VUP/U,1000,870,Grey,VUP0000/RTB,Gunfoam Roof Tiles Grey 870
+        VUP/U,1000,875,Yellow,VUP0000/U,Gunfoam All Season New 870
+        VUP/U,1000,820,Yellow,VUP0001/U,Gunfoam All Season New 820
+        VUP/U,1000,750,Orange,VUP0002/O,Gunfoam All Season Orange 750
+        VUP/U,1000,750,Yellow,VUP0002/RT,Gunfoam Roof Tiles 750
+        VUP/U,1000,750,Grey,VUP0002/RTB,Gunfoam Roof Tiles Grey 750
+        VUP/U,1000,750,Orange,VUP0002/RTO,Gunfoam Roof Tiles Orange 750
+        VUP/U,1000,750,Yellow,VUP0002/U,Gunfoam All Season New 750
+        VUP/U,1000,725,Yellow,VUP0004/U,Gunfoam All Season New 730
+        VUP/U,1000,650,Yellow,VUP0005/U,Gunfoam All Season New 650
+        VUP/U,1000,520,Yellow,VUP0008/U,Gunfoam All Season New 510
+        VUP/U,1000,715,Yellow,VUP0009/U,Gunfoam All Season New 720
+        VUP/U,1000,615,Yellow,VUP0013/U,Gunfoam All Season New 620
+        VUP/U,1000,815,Yellow,VUP0027/U,Gunfoam All Season New 820
+        VUP/U,1000,775,Yellow,VUP0028/U,Gunfoam All Season New 780
+        VUP/U,800,690,Carbon Black,VUP0102/CB,Gunfoam All Season Black 690
+        VUP/U,800,700,Green,VUP0102/UR,Gunfoam All Season New Green 700
+        VUP/U,650,500,Yellow,VUP0202/U,Gunfoam All Season New 500
+        VWK,1000,745,Yellow,VWK0002,Strawfoam B2  750
+        VWK,1000,745,Grey,VWK0002/H,
+        VWK,650,500,Yellow,VWK0202,Strawfoam B2 500
+        VWP,1000,820,Yellow,VWP0000,Gunfoam B2  820
+        VWP,1000,875,Yellow,VWP0001,Gunfoam B2  880
+        VWP,1000,745,Yellow,VWP0002,Gunfoam B2  750
+        VWP,1000,745,Grey,VWP0002/H,Gunfoam B2 Grey 750
+        VWP,800,675,Orange,VWP0102/O,Gunfoam B2 Orange 680
+        VWP,650,520,Yellow,VWP0201,Gunfoam B2  520
+        VWP,650,500,Yellow,VWP0202,Gunfoam B2  500
+        VWP,650,500,Grey,VWP0202/H,Gunfoam B2 Grey 500
+        VXP,1000,870,Yellow,VXP0000,Gunfoam High Yield  870
+        VXP,1000,800,Yellow,VXP0001,Gunfoam High Yield  800
+        VXP,1000,750,Yellow,VXP0002,Gunfoam High Yield  750
+        VXP,1000,750,Grey,VXP0002/B,Gunfoam High Yield Black 750
+        VXP,1000,750,Orange,VXP0002/O,Gunfoam High Yield Orange 750
+        VXP,1000,750,Green,VXP0002/R,Gunfoam High Yield  750 Green
+        VXP,1000,780,Yellow,VXP0007,Gunfoam High Yield  780
+        VXP,1000,820,Yellow,VXP0008,Gunfoam High Yield  830
+        VXP,1000,710,Yellow,VXP0025,Gunfoam High Yield  710
+        VXP,1000,880,Yellow,VXP0044,Gunfoam High Yield  880
+        VXP,800,685,Yellow,VXP0102,Gunfoam High Yield  690
+        VYP,1000,745,Yellow,VYP0002,Gunfoam B2 Winter  750
+        VYP,650,500,Yellow,VYP0202,Gunfoam B2 Winter  500

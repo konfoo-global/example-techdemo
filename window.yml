@@ -1,0 +1,32 @@
+WindowDemo:
+    meta:
+        title: Visual component demo
+        visualizerPosition: side
+        visualizers:
+            knf-window:
+                url: https://components.konfoo.com/knf-window.js
+                svg_width: 100%
+                svg_height: 300
+
+    openable_left: PaneOpenable
+    openable_right: PaneOpenable
+
+    width:
+        type: OpeningSize
+        default: 1500
+    height:
+        type: OpeningSize
+        default: 1500
+    width_first:
+        type: PaneSize
+        default: 300
+    width_second:
+        type: compute
+        trigger:
+            - width
+            - width_first
+        code: |
+            fn compute_second() {
+                let margin = 10; // some margin between windows
+                return self.width - self.width_first - margin;
+            }

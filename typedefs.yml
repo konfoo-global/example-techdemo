@@ -1,0 +1,33 @@
+# Here you can define custom types for convenient re-use.
+
+PaneOpenable:
+    type: choice
+    constraint: optional
+    options:
+        - Left
+        - Right
+        - Top
+
+OpeningSize:
+    type: numeric
+    min: 1500
+    max: 10000
+    step: 10
+
+PaneSize:
+    type: numeric
+    min: 300
+    max: 5000
+    step: 10
+
+# Example preset type
+ExamplePreset:
+    type: preset
+    options:
+        Preset1: self.set('field', 'value1');
+        Preset2: |
+            self.set('field', 'value2');
+            root.set('name', 'Hello');
+        Something Else: |
+            self.initialize();
+            self.set('field', 'value3');
